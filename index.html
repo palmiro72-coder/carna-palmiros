@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="CARNA PALMIROS 2026 - Sem Flacidez, Sem Rugas!">
+<meta property="og:description" content="5 Frascos Sculptra + Dysport 100UI por apenas R$15.000 no PIX! Promoção de Carnaval imperdível!">
+<title>CARNA PALMIROS 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Bebas+Neue&family=Poppins:wght@400;600;700;800;900&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --pink-hot: #FF1493;
+    --pink-light: #FF69B4;
+    --gold: #FFD700;
+    --gold-dark: #DAA520;
+    --purple: #8B008B;
+    --purple-light: #BA55D3;
+    --teal: #00CED1;
+    --magenta: #FF00FF;
+    --white: #FFFFFF;
+    --bg-dark: #1a0a1a;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-dark);
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Animated gradient background */
+  .bg-gradient {
+    position: fixed;
+    inset: 0;
+    background: 
+      radial-gradient(ellipse at 20% 50%, rgba(255,20,147,0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, rgba(138,43,226,0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 80%, rgba(255,215,0,0.1) 0%, transparent 50%),
+      var(--bg-dark);
+    z-index: 0;
+    animation: bgPulse 8s ease-in-out infinite;
+  }
+
+  @keyframes bgPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+
+  /* Canvas for confetti */
+  #confetti-canvas {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* Main card */
+  .card-wrapper {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 480px;
+    margin: 20px auto;
+    padding: 0 16px;
+  }
+
+  .card {
+    position: relative;
+    background: linear-gradient(145deg, #ffffff 0%, #fff5f9 50%, #fff0f5 100%);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 
+      0 0 60px rgba(255,20,147,0.3),
+      0 0 120px rgba(255,20,147,0.1),
+      0 20px 60px rgba(0,0,0,0.3);
+    animation: cardFloat 6s ease-in-out infinite;
+  }
+
+  @keyframes cardFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  /* Glitter border */
+  .card::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    background: linear-gradient(45deg, var(--gold), var(--pink-hot), var(--purple), var(--teal), var(--gold), var(--magenta));
+    background-size: 400% 400%;
+    border-radius: 26px;
+    z-index: -1;
+    animation: borderGlitter 3s linear infinite;
+  }
+
+  @keyframes borderGlitter {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Top section with mask */
+  .hero {
+    position: relative;
+    background: linear-gradient(135deg, var(--pink-hot) 0%, var(--purple) 50%, var(--pink-hot) 100%);
+    background-size: 200% 200%;
+    animation: heroShift 4s ease-in-out infinite;
+    padding: 40px 20px 30px;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  @keyframes heroShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* Sparkle overlay on hero */
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+      radial-gradient(2px 2px at 20% 30%, rgba(255,255,255,0.8), transparent),
+      radial-gradient(2px 2px at 40% 70%, rgba(255,255,255,0.6), transparent),
+      radial-gradient(1px 1px at 60% 20%, rgba(255,255,255,0.9), transparent),
+      radial-gradient(2px 2px at 80% 50%, rgba(255,255,255,0.7), transparent),
+      radial-gradient(1px 1px at 10% 80%, rgba(255,255,255,0.8), transparent),
+      radial-gradient(1px 1px at 70% 90%, rgba(255,255,255,0.6), transparent),
+      radial-gradient(2px 2px at 90% 10%, rgba(255,255,255,0.7), transparent);
+    animation: sparkle 2s ease-in-out infinite alternate;
+    pointer-events: none;
+  }
+
+  @keyframes sparkle {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; }
+  }
+
+  .mask-emoji {
+    font-size: 64px;
+    animation: maskBounce 2s ease-in-out infinite;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+  }
+
+  @keyframes maskBounce {
+    0%, 100% { transform: scale(1) rotate(-5deg); }
+    50% { transform: scale(1.1) rotate(5deg); }
+  }
+
+  .hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    letter-spacing: 4px;
+    margin-top: 8px;
+    animation: titlePulse 3s ease-in-out infinite;
+  }
+
+  @keyframes titlePulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+  }
+
+  /* CARNA text with glitter effect */
+  .carna-text {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 5rem;
+    line-height: 1;
+    background: linear-gradient(135deg, var(--gold) 0%, #FFA500 20%, var(--pink-hot) 40%, var(--purple-light) 60%, var(--teal) 80%, var(--gold) 100%);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: glitterText 3s ease-in-out infinite;
+    filter: drop-shadow(0 4px 12px rgba(255,215,0,0.5));
+    margin: -5px 0;
+  }
+
+  @keyframes glitterText {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .palmiros-text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    color: var(--white);
+    letter-spacing: 12px;
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.2);
+  }
+
+  /* Date badge */
+  .date-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--purple), #6B0080);
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 8px 28px;
+    border-radius: 50px;
+    margin-top: 12px;
+    box-shadow: 0 4px 15px rgba(139,0,139,0.4);
+    animation: badgePop 2s ease-in-out infinite;
+  }
+
+  @keyframes badgePop {
+    0%, 100% { transform: scale(1); box-shadow: 0 4px 15px rgba(139,0,139,0.4); }
+    50% { transform: scale(1.05); box-shadow: 0 4px 25px rgba(139,0,139,0.6); }
+  }
+
+  /* Content section */
+  .content {
+    padding: 32px 24px 20px;
+    text-align: center;
+    position: relative;
+  }
+
+  /* Urgency countdown */
+  .countdown-section {
+    margin-bottom: 24px;
+  }
+
+  .countdown-label {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.3rem;
+    color: var(--pink-hot);
+    margin-bottom: 10px;
+  }
+
+  .countdown {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .countdown-item {
+    background: linear-gradient(135deg, var(--pink-hot), var(--purple));
+    color: white;
+    border-radius: 14px;
+    padding: 10px 14px;
+    min-width: 65px;
+    box-shadow: 0 4px 15px rgba(255,20,147,0.3);
+    animation: countPulse 1s ease-in-out infinite;
+  }
+
+  .countdown-item:nth-child(2) { animation-delay: 0.2s; }
+  .countdown-item:nth-child(3) { animation-delay: 0.4s; }
+  .countdown-item:nth-child(4) { animation-delay: 0.6s; }
+
+  @keyframes countPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+  }
+
+  .countdown-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  .countdown-unit {
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
+  }
+
+  /* Benefits with icons */
+  .benefit {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #2d0a2d;
+    margin: 6px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .benefit .strike {
+    color: var(--pink-hot);
+    font-size: 1.6rem;
+  }
+
+  /* Products */
+  .products {
+    margin: 20px 0;
+    padding: 16px;
+    background: linear-gradient(135deg, rgba(255,20,147,0.06), rgba(139,0,139,0.06));
+    border-radius: 16px;
+    border: 1px solid rgba(255,20,147,0.15);
+  }
+
+  .product-item {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #4a0e4a;
+    padding: 4px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .product-item .icon {
+    font-size: 1.3rem;
+  }
+
+  .product-highlight {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
+    color: var(--purple);
+    letter-spacing: 2px;
+    margin-top: 4px;
+  }
+
+  /* Pricing section */
+  .pricing {
+    margin: 24px 0 16px;
+    position: relative;
+  }
+
+  .price-installment {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 6px;
+  }
+
+  .price-installment span {
+    font-weight: 800;
+    font-size: 1.15rem;
+    color: #4a0e4a;
+  }
+
+  .price-divider {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.4rem;
+    color: var(--pink-hot);
+    margin: 8px 0;
+  }
+
+  .price-pix-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
+  .price-pix-label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--white);
+    background: linear-gradient(135deg, #00b894, #00a381);
+    display: inline-block;
+    padding: 3px 16px;
+    border-radius: 20px 20px 0 0;
+    letter-spacing: 2px;
+  }
+
+  .price-pix {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+    line-height: 1;
+    color: #00a381;
+    position: relative;
+    animation: pricePop 3s ease-in-out infinite;
+  }
+
+  @keyframes pricePop {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+
+  .price-pix::after {
+    content: '🔥';
+    position: absolute;
+    top: -10px;
+    right: -30px;
+    font-size: 1.5rem;
+    animation: fireBounce 1s ease-in-out infinite;
+  }
+
+  @keyframes fireBounce {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-5px) scale(1.2); }
+  }
+
+  .savings-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    color: #4a0e00;
+    font-weight: 800;
+    font-size: 0.8rem;
+    padding: 5px 16px;
+    border-radius: 50px;
+    margin-top: 8px;
+    animation: savingsFlash 2s ease-in-out infinite;
+    letter-spacing: 0.5px;
+  }
+
+  @keyframes savingsFlash {
+    0%, 100% { box-shadow: 0 0 10px rgba(255,215,0,0.3); }
+    50% { box-shadow: 0 0 25px rgba(255,215,0,0.6); }
+  }
+
+  /* CTA button */
+  .cta-section {
+    margin: 24px 0 8px;
+  }
+
+  .cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    padding: 16px 36px;
+    border-radius: 60px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 6px 25px rgba(37,211,102,0.4);
+    transition: all 0.3s ease;
+    animation: ctaPulse 2s ease-in-out infinite;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .cta-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 35px rgba(37,211,102,0.5);
+  }
+
+  @keyframes ctaPulse {
+    0%, 100% { box-shadow: 0 6px 25px rgba(37,211,102,0.4); }
+    50% { box-shadow: 0 6px 40px rgba(37,211,102,0.6); }
+  }
+
+  .cta-button svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+  }
+
+  /* Social proof */
+  .social-proof {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 12px;
+    font-size: 0.8rem;
+    color: #888;
+    font-weight: 600;
+  }
+
+  .social-proof .dot {
+    width: 8px;
+    height: 8px;
+    background: #25D366;
+    border-radius: 50%;
+    animation: dotBlink 1.5s ease-in-out infinite;
+  }
+
+  @keyframes dotBlink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  /* Share strip */
+  .share-strip {
+    padding: 20px 24px;
+    text-align: center;
+    border-top: 1px solid rgba(255,20,147,0.1);
+    background: rgba(255,245,249,0.8);
+  }
+
+  .share-label {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.1rem;
+    color: var(--pink-hot);
+    margin-bottom: 12px;
+  }
+
+  .share-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .share-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  }
+
+  .share-btn:hover {
+    transform: translateY(-3px) scale(1.1);
+  }
+
+  .share-btn svg {
+    width: 22px;
+    height: 22px;
+    fill: white;
+  }
+
+  .share-btn.whatsapp { background: #25D366; }
+  .share-btn.instagram { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+  .share-btn.copy { background: linear-gradient(135deg, var(--pink-hot), var(--purple)); }
+
+  /* Footer note */
+  .footer-note {
+    padding: 16px;
+    text-align: center;
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.4);
+    position: relative;
+    z-index: 10;
+  }
+
+  /* Floating emojis */
+  .floating-emoji {
+    position: fixed;
+    font-size: 2rem;
+    z-index: 5;
+    pointer-events: none;
+    animation: floatUp 6s linear forwards;
+    opacity: 0;
+  }
+
+  @keyframes floatUp {
+    0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(-100px) rotate(720deg); opacity: 0; }
+  }
+
+  /* Limited spots animation */
+  .urgency-bar {
+    background: linear-gradient(90deg, var(--gold), #FFA500);
+    padding: 8px 16px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 0.78rem;
+    color: #4a0e00;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    animation: urgencyFlash 2s ease-in-out infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  @keyframes urgencyFlash {
+    0%, 100% { background: linear-gradient(90deg, var(--gold), #FFA500); }
+    50% { background: linear-gradient(90deg, #FFA500, var(--gold)); }
+  }
+
+  /* Responsive */
+  @media (max-width: 400px) {
+    .carna-text { font-size: 3.8rem; }
+    .hero-title { font-size: 1.8rem; }
+    .palmiros-text { font-size: 2rem; letter-spacing: 8px; }
+    .price-pix { font-size: 2.8rem; }
+    .benefit { font-size: 1.2rem; }
+    .cta-button { font-size: 1rem; padding: 14px 28px; }
+    .countdown-item { min-width: 55px; padding: 8px 10px; }
+    .countdown-number { font-size: 1.6rem; }
+  }
+
+  /* Toast notification */
+  .toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: #333;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+
+  .toast.show {
+    transform: translateX(-50%) translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<div class="bg-gradient"></div>
+<canvas id="confetti-canvas"></canvas>
+
+<div class="card-wrapper">
+  <div class="card">
+    <!-- Urgency bar -->
+    <div class="urgency-bar">
+      <span>⚡</span>
+      <span>VAGAS LIMITADAS — APENAS HOJE!</span>
+      <span>⚡</span>
+    </div>
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="mask-emoji">🎭</div>
+      <div class="hero-title">VEM CAIR NA FOLIA!</div>
+      <div class="carna-text">CARNA</div>
+      <div class="palmiros-text">PALMIROS</div>
+      <div class="date-badge">📅 13.02.2026</div>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+      <!-- Countdown -->
+      <div class="countdown-section">
+        <div class="countdown-label">⏰ Oferta expira em:</div>
+        <div class="countdown">
+          <div class="countdown-item">
+            <div class="countdown-number" id="hours">23</div>
+            <div class="countdown-unit">Horas</div>
+          </div>
+          <div class="countdown-item">
+            <div class="countdown-number" id="minutes">59</div>
+            <div class="countdown-unit">Min</div>
+          </div>
+          <div class="countdown-item">
+            <div class="countdown-number" id="seconds">59</div>
+            <div class="countdown-unit">Seg</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Benefits -->
+      <div class="benefit"><span class="strike">✕</span> FLACIDEZ</div>
+      <div class="benefit"><span class="strike">✕</span> RUGAS</div>
+
+      <!-- Products -->
+      <div class="products">
+        <div class="product-item"><span class="icon">💎</span> 5 Frascos Sculptra</div>
+        <div class="product-item"><span class="icon">✨</span> Dysport 100UI</div>
+        <div class="product-highlight">COMBO EXCLUSIVO DE CARNAVAL</div>
+      </div>
+
+      <!-- Pricing -->
+      <div class="pricing">
+        <div class="price-installment">12x de <span>R$ 1.313,13</span></div>
+        <div class="price-divider">ou à vista no</div>
+        <div class="price-pix-wrapper">
+          <div class="price-pix-label">💚 PIX</div>
+          <div class="price-pix">R$ 15.000</div>
+        </div>
+        <div><span class="savings-badge">🏷️ ECONOMIZE COM PIX!</span></div>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-section">
+        <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Quero%20o%20CARNA%20PALMIROS%20%F0%9F%8E%AD%F0%9F%92%8E" class="cta-button" id="cta-btn">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          AGENDAR AGORA
+        </a>
+        <div class="social-proof">
+          <span class="dot"></span>
+          <span id="viewer-count">47</span> pessoas vendo agora
+        </div>
+      </div>
+    </div>
+
+    <!-- Share strip -->
+    <div class="share-strip">
+      <div class="share-label">Compartilhe com quem precisa de um up! 💕</div>
+      <div class="share-buttons">
+        <button class="share-btn whatsapp" onclick="shareWhatsApp()" title="Compartilhar no WhatsApp">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </button>
+        <button class="share-btn instagram" onclick="shareInstagram()" title="Salvar para Stories">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </button>
+        <button class="share-btn copy" onclick="copyLink()" title="Copiar link">
+          <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer-note">
+  Clínica Palmiros • São Paulo, SP<br>
+  Promoção válida apenas em 13/02/2026
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ===== CONFETTI ENGINE =====
+const canvas = document.getElementById('confetti-canvas');
+const ctx = canvas.getContext('2d');
+let W, H;
+const confettiPieces = [];
+const colors = ['#FF1493', '#FFD700', '#8B008B', '#00CED1', '#FF69B4', '#FF00FF', '#FFA500', '#BA55D3'];
+
+function resize() {
+  W = canvas.width = window.innerWidth;
+  H = canvas.height = window.innerHeight;
+}
+resize();
+window.addEventListener('resize', resize);
+
+class Confetti {
+  constructor() {
+    this.reset();
+  }
+  reset() {
+    this.x = Math.random() * W;
+    this.y = Math.random() * -H;
+    this.w = Math.random() * 10 + 5;
+    this.h = Math.random() * 6 + 3;
+    this.color = colors[Math.floor(Math.random() * colors.length)];
+    this.speed = Math.random() * 2 + 1;
+    this.angle = Math.random() * Math.PI * 2;
+    this.spin = (Math.random() - 0.5) * 0.1;
+    this.drift = (Math.random() - 0.5) * 0.5;
+    this.opacity = Math.random() * 0.5 + 0.5;
+  }
+  update() {
+    this.y += this.speed;
+    this.x += this.drift + Math.sin(this.angle) * 0.5;
+    this.angle += this.spin;
+    if (this.y > H + 20) this.reset();
+  }
+  draw() {
+    ctx.save();
+    ctx.translate(this.x, this.y);
+    ctx.rotate(this.angle);
+    ctx.globalAlpha = this.opacity;
+    ctx.fillStyle = this.color;
+    ctx.fillRect(-this.w / 2, -this.h / 2, this.w, this.h);
+    ctx.restore();
+  }
+}
+
+for (let i = 0; i < 80; i++) {
+  const c = new Confetti();
+  c.y = Math.random() * H;
+  confettiPieces.push(c);
+}
+
+function animateConfetti() {
+  ctx.clearRect(0, 0, W, H);
+  confettiPieces.forEach(c => { c.update(); c.draw(); });
+  requestAnimationFrame(animateConfetti);
+}
+animateConfetti();
+
+// ===== COUNTDOWN TIMER =====
+function startCountdown() {
+  const end = new Date();
+  end.setHours(23, 59, 59, 999);
+
+  function update() {
+    const now = new Date();
+    let diff = Math.max(0, end - now);
+    const h = Math.floor(diff / 3600000); diff %= 3600000;
+    const m = Math.floor(diff / 60000); diff %= 60000;
+    const s = Math.floor(diff / 1000);
+    document.getElementById('hours').textContent = String(h).padStart(2, '0');
+    document.getElementById('minutes').textContent = String(m).padStart(2, '0');
+    document.getElementById('seconds').textContent = String(s).padStart(2, '0');
+  }
+  update();
+  setInterval(update, 1000);
+}
+startCountdown();
+
+// ===== VIEWER COUNT SIMULATION =====
+function updateViewers() {
+  const el = document.getElementById('viewer-count');
+  const base = 38;
+  const variation = Math.floor(Math.random() * 25);
+  el.textContent = base + variation;
+}
+setInterval(updateViewers, 5000);
+
+// ===== FLOATING EMOJIS =====
+const emojis = ['🎭', '💎', '✨', '🎉', '💕', '🔥', '🎊', '💜', '🌟'];
+function spawnEmoji() {
+  const el = document.createElement('div');
+  el.className = 'floating-emoji';
+  el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+  el.style.left = Math.random() * 100 + 'vw';
+  el.style.animationDuration = (4 + Math.random() * 4) + 's';
+  document.body.appendChild(el);
+  setTimeout(() => el.remove(), 8000);
+}
+setInterval(spawnEmoji, 2000);
+
+// ===== SHARE FUNCTIONS =====
+const shareText = "🎭✨ CARNA PALMIROS 2026! ✨🎭\n\n❌ Sem Flacidez\n❌ Sem Rugas\n\n💎 5 Frascos Sculptra + Dysport 100UI\n💚 PIX: R$ 15.000,00\n💳 12x R$ 1.313,13\n\n⚡ VAGAS LIMITADAS!\n📅 13/02/2026\n\n👉 Agende agora pelo WhatsApp!";
+
+function shareWhatsApp() {
+  window.open('https://wa.me/?text=' + encodeURIComponent(shareText), '_blank');
+}
+
+function shareInstagram() {
+  showToast('📸 Faça screenshot e poste nos Stories!');
+}
+
+function copyLink() {
+  navigator.clipboard.writeText(shareText).then(() => {
+    showToast('✅ Texto copiado! Cole onde quiser');
+  }).catch(() => {
+    showToast('📋 Segure para copiar o texto');
+  });
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3000);
+}
+
+// ===== CTA BURST EFFECT =====
+document.getElementById('cta-btn').addEventListener('click', (e) => {
+  for (let i = 0; i < 30; i++) {
+    const c = new Confetti();
+    c.x = e.clientX;
+    c.y = e.clientY;
+    c.speed = Math.random() * 5 + 2;
+    c.drift = (Math.random() - 0.5) * 4;
+    confettiPieces.push(c);
+  }
+});
+</script>
+
+</body>
+</html>
